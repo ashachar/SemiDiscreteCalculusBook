@@ -7271,8 +7271,8 @@ Consider the case where we approximate the derivative sign numerically with the 
 
 This is useful for debugging your gradient computations, or in case your custom loss function, tailored by domain considerations, is not differentiable. The numerical issue with the gradient sign is embodied in the redundant division by a small number. This approach does not affect the final result, the numerator, $\text{sgn}\left[L\left(\theta+h\right)-L\left(\theta-h\right)\right]$; however, it amounts to a logarithmic or linearithmic computation time in the number of digits and occasionally results in an overflow. We’d better avoid it altogether.
 
-\index{Trends Calculation Workaround}
-\subsection{Trends Calculation Workaround}
+\index{A Trends Calculation Workaround}
+\subsection{A Trends Calculation Workaround}
 
 Let us use an example. Whenever you scrutinize your car's dashboard, you notice Calculus. The mileage is equivalent to the definite integral of the way you did so far, and the speedometer reflects the derivative of your way with respect to time. Both physical instruments merely approximate abstract notions.
 
