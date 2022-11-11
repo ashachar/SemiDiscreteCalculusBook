@@ -2536,9 +2536,7 @@ depth.
 \index{Agricultural Engineering}
 
 \section{Agricultural Engineering}
-Yield trends have many applications in agricultural engineering, which makes the derivative sign particularly important . In \cite{zymaroieva2020spatial}, for instance, when the model is linear, the yield trend may be classified based on the slope sign. If the slope is negative, yields always decrease; thus, they may be classified as ``yields collapsed.'' 
-
-There wasn't any case with a trend that may be classified as ``yields collapsed'' in our data set. If the slope of the linear equation was positive, it meant that yields were increasing and thus were classified  as ``yields increasing.'' When the chosen model was quadratic, and if the quadratic term was positive, the trend was classified as ``yields increasing.'' When the quadratic term was negative, the trend was classified as ``yields stagnating.'' When the chosen model was quartic, the trend was classified as ``yields stagnating.'' 
+Yield trends have many applications in agricultural engineering, which makes the derivative sign particularly important . In \cite{zymaroieva2020spatial}, for instance, when the model is linear, the yield trend may be classified based on the slope sign. If the slope is negative, yields always decrease; thus, they may be classified as ``yields collapsed.'' If the slope of the linear equation was positive, it meant that yields were increasing and thus were classified  as ``yields increasing.'' When the chosen model was quadratic, and if the quadratic term was positive, the trend was classified as ``yields increasing.'' When the quadratic term was negative, the trend was classified as ``yields stagnating.''
 	
 The slope sign is also relevant to the shape of action, estimated as the number of turn changes in the sign of the envelope intensity slope (\cite{ngo2020research}).
 
@@ -8115,11 +8113,12 @@ $$f_{\pm}^{;}\left(x\right)=\left(\pm1\right)^{k+1}\text{sgn}\left[f^{\left(k\ri
 where $f^{\left(i\right)}$ represents the $i^{th}$ derivative, and $k=\min\left\{ i\in\mathbb{N}|f^{\left(i\right)}\left(x\right)\neq0\right\}$, if there exists such $k$.
 \label{semi_discrete_taylor}
 \end{crl}
-\begin{proof}The first equality is obtained from the Taylor series: $$f(x+h)=f(x)+hf'(x)+\frac{h^{2}}{2}f''(x)+\frac{h^{3}}{6}f^{(3)}(x)+\ldots$$
+\begin{proof}Applying simple algebraic manipulations and the limit process the Taylor series: $$f(x+h)=f(x)+hf'(x)+\frac{h^{2}}{2}f''(x)+\frac{h^{3}}{6}f^{(3)}(x)+\ldots$$
 
-by simple algebraic manipulations followed by applying the limit process.
+yields the equation:
+$$f_{\pm}^{;}\left(x\right)=\underset{{\scriptscriptstyle h\rightarrow0^{\pm}}}{\lim}sgn\left[\underset{{\scriptscriptstyle i\in\mathbb{N}}}{\overset{}{\sum}}\frac{h^{i-1}}{i!}f_{\pm}^{\left(i\right)}\left(x\right)\right].$$
 
-The second equality holds due to the following analysis:
+The claim's statement holds due to the following analysis:
 \begin{align}
 &\begin{aligned}
 \underset{{\scriptscriptstyle h\rightarrow0^{\pm}}}{\lim}\text{sgn}\left[\underset{{\scriptscriptstyle i\in\mathbb{N}}}{\overset{}{\sum}}\frac{h^{i-1}}{i!}f_{\pm}^{\left(i\right)}\left(x\right)\right] &= \underset{{\scriptscriptstyle h\rightarrow0^{\pm}}}{\lim}\text{sgn}\left[\frac{h^{k-1}}{k!}f^{\left(k\right)}\left(x\right)+\mathcal{O}\left(h^{k}\right)\right] \\ 
@@ -8127,7 +8126,7 @@ The second equality holds due to the following analysis:
 \end{aligned}
 \end{align}
 
-where the second equality holds because for a sufficiently small $h$, we have that $$\text{sgn}\left[\frac{h^{k-1}}{k!}f^{\left(k\right)}\left(x\right)+\mathcal{O}\left(h^{k}\right)\right]=\text{sgn}\left[\frac{h^{k-1}}{k!}f^{\left(k\right)}\left(x\right)\right].$$
+where the second equality above holds because for a sufficiently small $h$, we have that $$\text{sgn}\left[\frac{h^{k-1}}{k!}f^{\left(k\right)}\left(x\right)+\mathcal{O}\left(h^{k}\right)\right]=\text{sgn}\left[\frac{h^{k-1}}{k!}f^{\left(k\right)}\left(x\right)\right].$$
 The final step is obtained by keeping in mind the limit’s side and the parity of $k$.
 \end{proof}
 
